@@ -1,0 +1,17 @@
+/target
+/.idea
+mvnw
+mvnw.cmd
+/.mvn
+.DS_Store
+/logs
+*.log
+*.iml
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.sql
+*.zip
+*.tar.gz
