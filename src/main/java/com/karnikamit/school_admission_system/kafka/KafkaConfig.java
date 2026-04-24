@@ -60,4 +60,5 @@ public class KafkaConfig {
     @Bean
     public KafkaTemplate<String, AdmissionRequest> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
+    }
 }
