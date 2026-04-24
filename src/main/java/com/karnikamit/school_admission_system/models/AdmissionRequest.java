@@ -1,13 +1,10 @@
 package com.karnikamit.school_admission_system.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Table(name ="admissions")
-@Data
+@Table(name ="admission_request")
 @NoArgsConstructor
 @AllArgsConstructor
 public class AdmissionRequest {
@@ -22,4 +19,44 @@ public class AdmissionRequest {
 
     @Column(name = "uniform_required")
     private boolean uniformRequired;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public boolean isUniformRequired() {
+        return uniformRequired;
+    }
+
+    public void setUniformRequired(boolean uniformRequired) {
+        this.uniformRequired = uniformRequired;
+    }
 }
