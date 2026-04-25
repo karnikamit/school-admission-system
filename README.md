@@ -1,6 +1,6 @@
 # School Admission System
 
-This project is a school admission system built with Spring Boot, Kafka, and PostgreSQL. It consists of an admission service for handling student admission requests and a transport service for processing them via Kafka.
+This project is a school admission system built with Spring Boot, Kafka, and PostgreSQL. It consists of an admission service for handling student admission requests and transport service and library-management-service for processing them via Kafka.
 
 ## Prerequisites
 
@@ -45,6 +45,15 @@ mvn spring-boot:run
 
 The transport service will start on `http://localhost:8082`.
 
+#### Library management Service
+
+```bash
+cd library-management-service
+mvn spring-boot:run
+```
+
+The transport service will start on `http://localhost:8083`.
+
 ### 3. Use the School Admission API
 
 To submit a student admission request, send a POST request to the admission service endpoint.
@@ -87,12 +96,12 @@ A successful request will return a response like:
 }
 ```
 
-The admission request will be saved to the PostgreSQL database and published to the Kafka topic `admission_requests` for further processing by the transport service.
+The admission request will be saved to the PostgreSQL database and published to the Kafka topic `admission_requests` for further processing by the transport service and library management service.
 
 ## Architecture
 
 - **Admission Service**: Handles HTTP requests for admission submissions, saves data to PostgreSQL, and publishes events to Kafka.
-- **Transport Service**: Consumes admission requests from Kafka and processes them (e.g., for transport arrangements).
+- **Transport & Library management services**: Consumes admission requests from Kafka and processes them (e.g., for transport arrangements and library card issuance).
 - **Kafka**: Acts as the message broker for decoupling services.
 - **PostgreSQL**: Stores admission request data.
 
