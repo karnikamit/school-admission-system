@@ -1,4 +1,4 @@
-package com.karnikamit.school_admission_system.models;
+package com.karnikamit.admission_service.models;
 
 public class ApiResponse<T> {
 

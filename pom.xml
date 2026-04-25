@@ -18,6 +18,8 @@
 	</properties>
 	<modules>
 		<module>admission-dto</module>
+		<module>admission-service</module>
+		<module>transport-service</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
