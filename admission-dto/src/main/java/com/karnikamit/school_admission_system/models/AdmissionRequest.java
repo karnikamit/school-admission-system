@@ -60,3 +60,4 @@ public class AdmissionRequest {
         this.uniformRequired = uniformRequired;
     }
 }
+

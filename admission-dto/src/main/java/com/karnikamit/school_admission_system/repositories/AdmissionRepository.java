@@ -8,3 +8,4 @@ import org.springframework.stereotype.Repository;
 public interface AdmissionRepository extends JpaRepository<AdmissionRequest, Long> {
 
 }
+

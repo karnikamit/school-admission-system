@@ -66,3 +66,4 @@ public class SchoolAdmissionController {
         return admissionRepository.saveAndFlush(request);
     }
 }
+
