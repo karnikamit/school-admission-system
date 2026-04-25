@@ -7,10 +7,12 @@
         <artifactId>school-admission-system</artifactId>
         <version>1.2.0-SNAPSHOT</version>
     </parent>
-    <artifactId>transport-service</artifactId>
-    <name>transport-service</name>
-    <description>Transport service for school admission system</description>
-
+    <artifactId>library-management-service</artifactId>
+    <name>library-management-service</name>
+    <description>Library management service for school admission system</description>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.karnikamit</groupId>

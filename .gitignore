@@ -16,3 +16,4 @@ mvnw.cmd
 *.zip
 *.tar.gz
 */target
+*.versionsBackup

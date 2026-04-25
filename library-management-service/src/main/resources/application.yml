@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092 # Use kafka:29092 if running inside Docker
+    consumer:
+      group-id: library-management-group
+      auto-offset-reset: earliest
+      # Key is a String (Student ID), Value is the JSON DTO
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+    properties:
+      spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+      spring.json.trusted.packages: "com.karnikamit.*"
